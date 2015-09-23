@@ -91,9 +91,9 @@ var Window = null;
         this.show();
     };
 
-    Window.prototype.show = function () {
+    Window.prototype.show = function (callback) {
         this.$el.css('visibility', 'visible');
-        this.$el.fadeIn();
+        this.$el.fadeIn(null,null,callback);
     };
 
     Window.prototype.centerWindow = function () {
